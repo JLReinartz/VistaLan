@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="styles-basic.css" />
+
+    <link rel="stylesheet" href="navbar.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VistaLan</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topnav" id="topnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Reservatie</a>
+        <a href="#">Sponsoren</a>
+        <a href="#">Contact</a>
+        <a href="#">Admin</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="welkom">WELKOM SD'er</div>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>Nummer</th>
+            <th>Naam</th>
+            <th>Game</th>
+            <th>Tijd</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>Mario Kart</td>
+            <td>25:35</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Sarah</td>
+            <td>Fortnite</td>
+            <td>1:10:45</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Michael</td>
+            <td>Call of Duty</td>
+            <td>42:15</td>
+          </tr>
+        </table>
+      </div>
+      <div class="orange-box"></div>
+    </div>
+  </body>
+
+  <script>
+    function hamburgermenu() {
+      var x = document.getElementById("topnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</html>
