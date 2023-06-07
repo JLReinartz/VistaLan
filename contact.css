@@ -1,0 +1,92 @@
+.container2 {
+    position: relative;
+    width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #EC644A;
+    color: #FFF;
+    border-radius: 20px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.photo-container2 {
+    text-align: center;
+}
+
+.photo-container2 img {
+    max-width: 80%;
+    height: auto;
+}
+
+.circle1 {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff166;
+    top: 600px;
+    left: 250px;
+  }
+
+.circle2{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff166;
+    top: 650px;
+    left: 150px;
+}
+.circle3{
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #fff166;
+    top: 700px;
+    left: 250px;
+}
+.circle4{
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff166;
+    right: 150px;
+    top: 380px;
+}
+.circle5{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff166;
+    right: 100px;
+    top: 260px;
+}
+.circle6{
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #fff166;
+    right: 220px;
+    top: 290px;
+}
+
+
+
