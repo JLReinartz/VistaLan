@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-basic.css" />
+    <link rel="stylesheet" href="contact.css" />
+
+    <link rel="stylesheet" href="navbar.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VistaLan</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topnav" id="topnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Reservatie</a>
+        <a href="#">Sponsoren</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Admin</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="boxes"></div>
+      <div class="orange-box"></div>
+      <div class="circles">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="circle5"></div>
+        <div class="circle6"></div>
+      </div>
+    </div>
+    <div class="container2">
+        <div class="contact-info">
+            <h2>Contacteer Ons</h2>
+            <p>Email: levi@vandegard.nl</p>
+            <p>Telefoon: 0699999999</p>
+        </div>
+        <div class="photo-container2">
+            <img src="img/Website Logo.png" class="logoimg">
+        </div>
+    </div>
+  </body>
+  <script>
+    function hamburgermenu() {
+      var x = document.getElementById("topnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</html>
