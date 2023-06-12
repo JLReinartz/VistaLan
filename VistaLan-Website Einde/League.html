@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="games.css"/>
+    <style>
+      .image-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .image-container a {
+        flex-basis: 33.33%;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservatie</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topnav" id="topnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="Reservatie.html">Reservatie</a>
+        <a href="#">Sponsoren</a>
+        <a href="#">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <div class="welkom">Welkom bij League of legends. De tactic spel van de Lanparty</div>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="league.jpg" alt="League">
+        </div>
+      </div>
+
+      <div class="welkom">
+        <p>League of Legends (oftewel LoL) is een game waarbij je veel tactieken moet hebben.</p>
+        <p>Hierbij organiseren wij een toernooi voor 5 tegen 5 te spelen.</p>
+        <p>De winnende team krijgen als prijs 1. 2. 3.</p>
+        <p>Dus denk jij dat jij DE beste persoon ben om bij een team aantesluiten!</p>
+        <p>Reserveer nu een plek door het onderstaande vragenlijst in te vullen, En dan zien we je snel bij de VISTALan party 2023</p>
+
+
+      </div>
+    </div>
+    
+    <script>
+      function hamburgermenu() {
+        var x = document.getElementById("topnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>
