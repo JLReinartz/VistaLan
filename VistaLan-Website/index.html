@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="games.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VistaLan</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topnav" id="topnav">
+        <a href="#" class="active">Home</a>
+        <a href="Reservatie.html">Reservatie</a>
+        <a href="#">Sponsoren</a>
+        <a href="#">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="welkom">Welkom bij de LAN-Party van VISTA</div>
+      <div class="boxes">
+        <div class="boxes-box1 box">
+          <div class="box-tekst">WAAR</div>
+          <div class="box-content">
+            VISTACollege Heerlen </br>
+            Valkenburgerweg 142 </br>
+            B-toren
+          </div>
+        </div>
+        <div class="boxes-box2 box"><div class="box-tekst">WANNEER</div>
+        <div class="box-content">
+          Maandag</br>
+          19 Juni 2023</br>
+          
+        </div></div>
+        <div class="boxes-box3 box"><div class="box-tekst">WAAROM</div>
+        <div class="box-content">
+          Afsluiting schooljaar</br>
+          Laatste opdracht voor ICT & SD studenten 2023</br>
+          
+        </div></div>
+      </div>
+    </div>
+  </body>
+  <script>function hamburgermenu() {
+    var x = document.getElementById("topnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }</script>
+</html>
