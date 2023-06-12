@@ -36,38 +36,39 @@
         </a>
       </div>
       <div class="welkom">WELKOM SD'er</div>
+      <div class="filter-container">
+        <label for="game-filter">Filter by Game:</label>
+        <select id="game-filter">
+          <option value="all">All Games</option>
+          <option value="pubg">PUBG</option>
+          <option value="csgo">CS:GO</option>
+          <option value="wii">Wii Games</option>
+          <option value="fortnite">Fortnite</option>
+        </select>
+      </div>
       <div class="table-container">
+        
         <table>
-          <tr>
-            <th>Nummer</th>
-            <th>Naam</th>
-            <th>Game</th>
-            <th>Tijd</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>John</td>
-            <td>Mario Kart</td>
-            <td>25:35</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Sarah</td>
-            <td>Fortnite</td>
-            <td>1:10:45</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Michael</td>
-            <td>Call of Duty</td>
-            <td>42:15</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Game</th>
+            </tr>
+          </thead>
+          <tbody id="data-container"></tbody>
         </table>
+      </div>
+      
       </div>
       <div class="orange-box"></div>
     </div>
   </body>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
+  <script src="admin.js" type="module"></script>
   <script>
     function hamburgermenu() {
       var x = document.getElementById("topnav");
@@ -78,4 +79,24 @@
       }
     }
   </script>
+  <script>var gameFilter = document.getElementById("game-filter");
+    gameFilter.addEventListener("change", function () {
+      var selectedGame = gameFilter.value;
+      filterDataByGame(selectedGame);
+    });
+    
+    function filterDataByGame(game) {
+      var dataContainer = document.getElementById("data-container");
+      var rows = dataContainer.getElementsByTagName("tr");
+    
+      for (var i = 0; i < rows.length; i++) {
+        var gameCell = rows[i].getElementsByTagName("td")[3];
+        if (game === "all" || gameCell.textContent.toLowerCase() === game.toLowerCase()) {
+          rows[i].style.display = "";
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
+    }
+    </script>
 </html>
