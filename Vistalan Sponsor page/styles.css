@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+body {
+  background-color: #02525c;
+  overflow-y: scroll;
+  overflow-x: none;
+  min-height: 1100px;
+}
+.welkom{
+  margin-top: 50px;
+  font-size: 26px;
+  color: #fff;
+  text-align: center;
+}
+
+.sponsorbox{
+  width: 200px;
+  height: 200px;
+  background-color: whitesmoke;
+  margin: 2em;
+}
+
+.sponsorboxflex{
+  display: flex;
+  justify-content: center;
+}
+
+.sponsorboxlogo{
+  align-items: center;
+  object-fit: contain;
+  width: 180px;
+}
+
+.logoflex{
+  display:flex;
+}
+
+.infobox{
+  z-index: 1;
+  width: 250px;
+  height: 150px;
+  margin: 2em;
+  background: whitesmoke;
+  border-radius: 5px;
+  border: whitesmoke 2px solid;
+
+  transition: height 0.4s cubic-bezier(.86,.28,.07,.86), border 0.5s cubic-bezier(.86,.28,.07,.86);
+}
+
+.infoboxlogo{
+  z-index: 2;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+  scale: 0.9;
+  object-fit: scale-down;
+}
+
+.infobox:hover{
+  height: 450px;
+  display: block;
+  border: #ec644a 2px solid;
+
+  transition: height .8s cubic-bezier(.86,.28,.07,.86), border 0.5s cubic-bezier(.86,.28,.07,.86);
+}
+
+
+.infobox:hover .hide {
+  display: block;
+  opacity: 1;
+
+  animation: visible 1.25s;
+  animation-delay: 0.7s;
+  animation-fill-mode: backwards;
+}
+
+.hide{
+  display:none;
+  margin-top: 20px;
+  padding: 4px;
+  font-size: 12px;
+  text-align:left;
+  opacity: 0;
+}
+
+.infoboxflex{
+  display:flex;
+  flex-shrink: 0;
+  justify-content: center;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #ec644a;
+  border-color: white;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 0px 20px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/* animatie ahaha */
+
+.topnav a {
+  display: inline-block;
+  position: relative;
+}
+
+.topnav a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 10px;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.topnav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.topnav a.active{
+  color:rgb(238, 255, 0);
+  font-weight: bold;
+}
+
+.navflex{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.vistalan{
+object-fit: cover;
+overflow: hidden;
+width: 100px;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 20px;
+}
+.link:hover {
+  color: black;
+}
+
+@keyframes visible{
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
