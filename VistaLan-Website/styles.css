@@ -1,0 +1,105 @@
+.welkom {
+  margin-top: 60px;
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+}
+.boxes {
+  max-width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+  display: flex;
+  gap: 5%;
+  color: #fff;
+  font-size: 26px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #09353b78;
+  width: 350px;
+  height: 60px;
+  transition: 0.1s;
+}
+.box:hover .box-tekst {
+  display: none;
+  transition: 0.3s;
+}
+.box:hover .box-content {
+  display: block;
+  transition: 0.3s;
+}
+.box:hover {
+  height: 120px;
+}
+.boxes-box1:hover,
+.boxes-box2:hover,
+.boxes-box3:hover {
+  background-color: #09353b;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.box-tekst {
+  font-size: 20px;
+}
+.box-content {
+  display: none;
+
+  font-size: 20px;
+  text-align: center;
+}
+.welkom-hover {
+  color: #ec644a;
+  transition: 0.2s;
+}
+.welkom-hover:hover {
+  transition: 0.5s;
+  color: #fff265;
+}
+/* INFO */
+.info-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+  margin-top: 80px;
+  gap: 5%;
+}
+.info,
+.info2 {
+  background-color: rgb(2, 56, 63, 0.4);
+  width: 40%;
+  min-height: 100px;
+  padding: 40px;
+}
+p {
+  font-size: 16px;
+  color: white;
+  letter-spacing: 1px;
+}
+h2 {
+  text-align: left;
+  padding: 2px;
+  padding-bottom: 2%;
+  font-weight: bolder;
+  font-size: 40px;
+}
+.infobox {
+  margin-left: 10px;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 1px;
+}
+i {
+  font-size: 16px;
+  color: white;
+}
+.icons {
+  display: flex;
+
+  align-items: center;
+  margin-top: 15px;
+}

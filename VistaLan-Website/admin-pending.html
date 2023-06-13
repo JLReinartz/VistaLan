@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-basic.css" />
+    <link rel="stylesheet" href="admin.css" />
+
+    <link rel="stylesheet" href="navbar.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VistaLan</title>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topnav" id="topnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Reservatie</a>
+        <a href="#">Sponsoren</a>
+        <a href="#">Contact</a>
+        <a href="#">Admin</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="welkom">ADMIN LOG-IN</div>
+      <div class="form-container">
+        <form id="passwordForm">
+          <label for="password">&lt;p&gt;WACHTWOORD&lt;/p&gt;</label>
+          <div class="passwordSubmit">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              onkeydown="handleKeyPress(event)"
+            />
+            <button type="button" onclick="checkPassword()">Login</button>
+          </div>
+        </form>
+      </div>
+      <div class="orange-box"></div>
+    </div>
+  </body>
+  <script>
+    function handleKeyPress(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        checkPassword();
+      }
+    }
+
+    function checkPassword() {
+      var passwordInput = document.getElementById("password").value;
+
+      if (passwordInput === "AdminLan2023") {
+        window.location.href = "admin.html"; // Redirect to admin.html
+      } else {
+        alert("Incorrect password!"); // Show an error message
+      }
+    }
+  </script>
+  <script>
+    function hamburgermenu() {
+      var x = document.getElementById("topnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</html>
