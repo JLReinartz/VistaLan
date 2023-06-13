@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LanPary</title>
+<link rel="stylesheet" href="Lan.css">
+</head>
+<body>
+
+    <div class="topnav" id="topnav">
+        <div class="topnav-logo">
+            <a href="#"><img src="Logo (2).png" alt="Logo" class="logo-image"></a>
+          </div>
+        <a href="Reservatie.html">Reservatie</a>
+        <a href="#">Sponsoren</a>
+        <a href="#">Contact</a>
+        <a href="Homepagelan.html" class="active">Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+        
+    </div>
+
+<div class="welkom">
+<p1> Welkom bij <span style="color: #EC644A;">VistaLAN party </span></p1>
+</div>
+
+<div class="vista-img">
+    <img src="BannerPromo1.af76d101.jpg" alt="Image 1" class="mic">
+    <img src="BannerPromo2.4967f0fb.jpg" alt="Image 2" class="mic">
+    <img src="BannerPromo3.3c393640.jpg" alt="Image 3" class="mic">
+  </div>
+
+<div class="infobalk">
+    <div class="info">
+<div class="title">
+<h3>Infomatie</h3>
+</div>
+<p1 class="tu"> Het is 2023 en we zijn terug! Net als vorig jaar organiseren De  VistaLan party.
+    Dit jaar willen we het nog groter aanpakken en hebben we een toplocatie geregeld: VistaCollege in Valkenburgerweg 148, in de B-Toren.
+    Schrijf je in voor de VISTALAN en bewijs jezelf tegen je medestudenten!
+</p1>
+</div>
+</div>
+
+<div class="line">
+
+</div>
+
+<div class="boxes">
+    <div class="boxes-box1 box">
+      <div class="box-tekst">Locatie</div>
+      <div class="box-content">
+        VistaCollege Heerlen </br>
+        Valkenburgerweg 142 </br>
+        B-toren
+      </div>
+    </div>
+    <div class="boxes-box2 box"><div class="box-tekst">WAARNEER</div>
+    <div class="box-content">
+      Maandag</br>
+      19 Juni 2023</br>
+      
+    </div></div>
+    <div class="boxes-box3 box"><div class="box-tekst">INSTRUCTIES</div>
+    <div class="box-content">
+      Kies op de icon van het spel die je wilt Reserveren.</br>
+      Vol alle gegevens in om te registeren.</br>
+      Klik op inlevern om definetief te Reserveren.</br>
+      Je krijgt een bevestigen via je mail als je klaar bent.</br>
+      Klik op inlevern om definetief te Reserveren.</br>
+    </div></div>
+  </div>
+</div>
+
+<div class="footer">
+
+</div>
+
+</body>
+
+
+<script>function hamburgermenu() {
+    var x = document.getElementById("topnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+<script>
+const images = document.querySelectorAll('.mic');
+let currentIndex = 0;
+
+function changeImage() {
+  images.forEach(image => {
+    image.style.opacity = '0';
+  });
+
+  currentIndex = (currentIndex + 1) % images.length;
+
+  images[currentIndex].style.opacity = '1';
+}
+
+setInterval(changeImage, 3000);
+</script>
+</html>
+
+
