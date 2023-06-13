@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reservatie-pending.css"/>
+    <link rel="stylesheet" href="styles-basic.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservatie</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topnav" id="topnav">
+        <a href="#" class="active">Home</a>
+        <a href="reservatie.html">Reservatie</a>
+        <a href="#">Sponsoren</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin-pending.html">Admin</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="box">
+        <div class="boxes">
+          <a href="CS-GO.html">
+            <img src="img/csgo.jpg" alt="">
+          </a>
+        </div>
+        <div class="boxes">
+          <a href="Fifa.html">
+            <img src="img/Fifa.png" alt="">
+          </a>
+        </div>
+        <div class="boxes">
+          <a href="Smashbros.html">
+            <img src="img/Smash.jpg" alt="">
+          </a>
+        </div>
+        <div class="boxes">
+          <a href="mariokart.html">
+            <img src="img/Mariokart.jpg" alt="">
+          </a>
+        </div>
+        <div class="boxes">
+          <a href="rocketleague.html">
+            <img src="img/Rocketleague.jpg" alt="">
+          </a>
+        </div>
+        <div class="boxes">
+          <a href="Fortnite.html">
+            <img src="img/Fortnite.jpg" alt="">
+          </a>
+        </div>
+        <div class="boxes">
+          <a href="streetfighter.html">
+            <img src="img/Street fighter.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      
+    
+
+
+    <script>
+      function hamburgermenu() {
+        var x = document.getElementById("topnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>

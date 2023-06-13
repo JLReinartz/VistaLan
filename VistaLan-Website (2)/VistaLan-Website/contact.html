@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-basic.css" />
+    <link rel="stylesheet" href="contact.css" />
+
+    <link rel="stylesheet" href="navbar.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VistaLan</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topnav" id="topnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Reservatie</a>
+        <a href="#">Sponsoren</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Admin</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="boxes"></div>
+      <div class="orange-box"></div>
+      <div class="circles">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="circle5"></div>
+        <div class="circle6"></div>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="contact-info">
+        <h2>Contacteer Ons</h2>
+        <p>Email: levi@vandegard.nl</p>
+        <p>Telefoon: 0699999999</p>
+      </div>
+      <div class="photo-container2">
+        <img src="img/Website Logo.png" class="logoimg" />
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="container1">
+        <div class="fname-box boxes"><label>Voornaam</label><input type="text" id="fname" class="fname" required /></div>
+        <div class="lname-box boxes"> <label>Achternaam</label><input type="text" id="lname" class="lname" required /></div>
+        <div class="mail-box boxes"> <label>VISTA mail</label>
+          <input type="text" id="age" class="age" required /></div>
+          <div class="password-box boxes">
+          </div>
+        <div class="comment-box boxes"> <label>Comment:</label><input type="text" id="comment" class="comment" required /></div>
+        <div class="captcha-box boxes">    <p>Ik ben geen robot.</p><input type="checkbox" id="captcha" /></div>
+      
+
+<button id="submit" class="submit"><p class="submit-text">SUBMIT</p></button>
+</div> 
+      <div class="container2">
+        <div class="bullet1 bullets"><i class="fa-regular fa-arrow-right bullet"></i><div>Het evenement duurt van <span style="color: #ec644a"> 11.00 tot 15.00</span></div> </div>
+        <div class="bullet2 bullets"><i class="fa-regular fa-arrow-right bullet"></i><div><span style="color: #ec644a">Prijzen</span> te winnen bij tournooien.</div> </div>
+        <div class="bullet3 bullets"><i class="fa-regular fa-arrow-right bullet"></i><div>U maakt gebruik van uw eigen gaming setup.</div> </div>
+        <div class="bullet4 bullets"><i class="fa-regular fa-arrow-right bullet"></i><div>Professioneel <span style="color: #ec644a">servicedesk</span> team aanwezig</div></div>
+        <div class="bullet5 bullets"><i class="fa-regular fa-arrow-right bullet"></i><div>Voldoende parkeergelegeheid.</div> </div>
+      </div>
+    </div>
+    <script src="contact.js" type="module"></script>
+  </body>
+  <script>
+    function hamburgermenu() {
+      var x = document.getElementById("topnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</html>

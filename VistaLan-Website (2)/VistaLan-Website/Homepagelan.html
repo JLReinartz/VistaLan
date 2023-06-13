@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Homepagelan.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VistaLan</title>
+  </head>
+  <body>
+    <header>
+      <div class="topnav" id="topnav">
+        <a href="#" class="logo">
+          <img src="Logo (2).png" alt="Logo">
+        </a>
+        <a href="#">Reservatie</a>
+        <a href="#">Sponsoren</a>
+        <a href="#">Contact</a>
+        <a href="Homepagelan.html" class="active">Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+        
+      </div>
+
+    </header> 
+<main>
+
+
+
+  <div id="image-container">
+    <img src="BannerPromo1.af76d101.jpg" alt="Image 1">
+    <img src="BannerPromo2.4967f0fb.jpg" alt="Image 2">
+    <img src="BannerPromo3.3c393640.jpg" alt="Image 3">
+  </div>
+
+
+    <H1>
+        Welkom bij <span style="color :#EC644A;">Vista LAN 2023</span> 
+    </H1>
+    
+
+<div class="info">
+<h2> <span style="color: #ec644a;"> Vista LAN Party</span></h2>
+<p1>  <img class= "pi "src="VistaPromo1.a870957c.png" alt="">Het is 2023 en we zijn terug! Net als vorig jaar organiseren "De <span style="color :#ec8d4a;"> VistaLan"</span> party.
+    Dit jaar willen we het nog groter aanpakken en hebben we een toplocatie geregeld: VistaCollege in Valkenburgerweg 148, in de B-Toren.
+    Schrijf je in voor de VISTALAN en bewijs jezelf tegen je medestudenten! Win prijzen en vooral het recht om jezelf de beste gamer te noemen van heel VISTA college! 
+    Binnenkort kun jij op de tweede verdieping van vista bij De B toren kan je jezelf bewijzen tegen je medestudenten en daarmee prijzen winnen;
+     maar vooral natuurlijk voor het recht om jezelf de beste gamer te noemen van heel Vista college!
+     Er zijn diverse spelletjes die je kunt spelen zoals Fornite, PUBG, Fifa en nog veel meer. Reserveer zo snel mogelijk voordat alle tickets op zijn!
+     <a href="#" class="button">Reserveren</a>
+    </p1>
+</div>
+
+      <div class="boxes">
+        <div class="boxes-box1 box">
+          <div class="box-tekst">WAAR</div>
+          <div class="box-content">
+            VistaCollege Heerlen </br>
+            Valkenburgerweg 142 </br>
+            B-toren
+          </div>
+        </div>
+        <div class="boxes-box2 box"><div class="box-tekst">WAARNEER</div>
+        <div class="box-content">
+          Maandag</br>
+          19 Juni 2023</br>
+          
+        </div></div>
+        <div class="boxes-box3 box"><div class="box-tekst">INSTRUCTIES</div>
+        <div class="box-content">
+          Kies op de icon van het spel die je wilt Reserveren.</br>
+          Vol alle gegevens in om te registeren.</br>
+          Klik op inlevern om definetief te Reserveren.</br>
+          Je krijgt een bevestigen via je mail als je klaar bent.</br>
+          Klik op inlevern om definetief te Reserveren.</br>
+        </div></div>
+      </div>
+    </div>
+  </main>
+
+    <footer>
+      Copyright © 2023 . All Rights Reserved.
+
+    </footer>
+
+  </body>
+  <script>function hamburgermenu() {
+    var x = document.getElementById("topnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<script>
+  // Get the image container and images
+  const container = document.getElementById('image-container');
+  const images = container.getElementsByTagName('img');
+  let currentIndex = 0;
+
+  // Function to animate the image change
+  function changeImage() {
+    // Hide the current image
+    images[currentIndex].style.opacity = '0';
+
+    // Calculate the index of the next image
+    currentIndex = (currentIndex + 1) % images.length;
+
+    // Show the next image
+    images[currentIndex].style.opacity = '1';
+  }
+
+  // Change image every 3 seconds
+  setInterval(changeImage, 3000);
+</script>
+
+
+</html>

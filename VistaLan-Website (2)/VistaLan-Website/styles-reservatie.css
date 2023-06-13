@@ -1,0 +1,99 @@
+.welkom {
+  margin-top: 60px;
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+}
+/* INFO */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .box {
+  margin-top: 40px;
+  width: 400px;
+  height: 300px;
+  background-color: rgb(255, 242, 101);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+label {
+  font-size: 16px;
+}
+.boxes, .bullets{
+padding: 14px;}
+#data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.main-container{
+  width: 100%;
+  display: flex;
+
+}
+.container1, .container2{
+  margin: 0 auto;
+  margin-top: 40px;
+color: #fff;
+  width: 40%;
+  height: auto;
+
+  background-color: #09353b78;
+}
+.fname-box, .lname-box , .mail-box ,.game-box, .captcha-box, .password-box{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+input {
+background-color: #ffffff2b;
+  font-size: 12px;
+  outline: none;
+  /* background-color: transparent; */
+  border: none;
+}
+
+select{
+  outline: none;
+  border: none;
+}
+.submit{
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background-color: #fff26599;
+  transition: 0.1s;
+ }
+.submit:hover{
+  cursor: pointer;
+  background-color: #fff265;
+  transition: 0.3s;
+}
+
+.submit-text{
+  font-size: 18px;
+  
+}
+
+/* CONTAINER 1 */
+.bullet{
+  font-size: 16px;
+}
+.bullets{
+  display: flex;
+  gap: 20px;
+  margin: 0 10%;
+}
