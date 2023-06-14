@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-basic.css" />
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="admin-pending.css">
+    <link rel="stylesheet" href="navbar.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VistaLan</title>
+</head>
+<body>
+    <div class="topnav" id="topnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="reservatie-pending.html">Reservatie</a>
+        <a href="#">Sponsoren</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin-pending.html">Admin</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="welkom">ADMIN LOG-IN</div>
+    <div class="main">
+      <div class="container">
+          <label for="password">Wachtwoord</label>
+          <input type="password" id="password" name="password" required>
+          <button id="submit">Login</button>
+          <div class="orange-box"></div>
+        </div>
+      </div>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCudlDAjHw0aR2dHolMEv-knjpPyQu9PoE",
+      authDomain: "vistalan-dc166.firebaseapp.com",
+      databaseURL: "https://vistalan-dc166-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "vistalan-dc166",
+      storageBucket: "vistalan-dc166.appspot.com",
+      messagingSenderId: "770100937512",
+      appId: "1:770100937512:web:2c6237b45c83b3a9d4061d"
+    };
+  
+    firebase.initializeApp(firebaseConfig);
+  
+    function checkPassword(password) {
+      var passwordRef = firebase.database().ref("passWord");
+  
+      passwordRef.once("value")
+        .then(function(snapshot) {
+          var storedPassword = snapshot.val();
+  
+          if (password === storedPassword) {
+            console.log("Password is correct");
+            increaseCounter();
+            window.location.href = "admin.html";
+          } else {
+            console.log("Password is incorrect");
+            alert("Incorrect password!");
+          }
+        })
+        .catch(function(error) {
+          console.error("Error retrieving password: ", error);
+        });
+    }
+  
+    function increaseCounter() {
+      var counterRef = firebase.database().ref("counter");
+      counterRef.transaction(function(currentValue) {
+        return (currentValue || 0) + 1;
+      });
+    }
+  
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("submit").addEventListener("click", function() {
+        var inputPassword = document.getElementById("password").value;
+        checkPassword(inputPassword);
+      });
+    });
+  </script>
+  
+  <script>
+    function hamburgermenu() {
+      var x = document.getElementById("topnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</body>
+</html>
