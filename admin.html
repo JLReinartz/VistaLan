@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="styles-basic.css" />
+
+    <link rel="stylesheet" href="navbar.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VistaLan</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topnav" id="topnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="reservatie-pending.html">Reservatie</a>
+        <a href="sponsor.html">Sponsoren</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin-pending.html">Admin</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="welkom">WELKOM SD'er</div>
+
+      <div class="filter-container">
+        <label for="game-filter">Filter by Game:</label>
+        <select id="game-filter">
+          <option value="all">All Games</option>
+          <option value="fortnite">Fortnite</option>
+          <option value="fifa">FIFA</option>
+          <option value="cs:go">CS:GO</option>
+          <option value="rocketleague">Rocket League</option>
+          <option value="mariokart">Mario Kart</option>
+          <option value="smashbros">Smash Bros</option>
+          <option value="streetfighter">Street Fighter</option>
+        </select>
+      </div>
+      
+      <div class="table-container">
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Game</th>
+            </tr>
+          </thead>
+          <tbody id="data-container"></tbody>
+          
+        </table>
+      </div>
+      <div class="table-container-contact">
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody id="data-container-contact"></tbody>
+        </table>
+      </div>
+      </div>
+      <div class="orange-box"></div>
+      <div class="yellow-ball1 ball"></div>
+      <div class="yellow-ball2 ball"></div>
+      <div class="yellow-ball3 ball"></div>
+    </div>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <script src="admin.js" type="module"></script>
+  <script>
+    function hamburgermenu() {
+      var x = document.getElementById("topnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+
+  <script>
+ 
+  var gameId = "YOUR_GAME_ID";
+    var counterRef = firebase.database().ref("reservaties/reservation/" + gameId + "/Game");
+  
+    // Attach an event listener to the counter reference
+    counterRef.on("value", function(snapshot) {
+      var counterValue = snapshot.val() || 0; // If the counter doesn't exist, default to 0
+      document.getElementById("counter").textContent = "Counter: " + counterValue;
+    });</script>
+  <script>var gameFilter = document.getElementById("game-filter");
+    gameFilter.addEventListener("change", function () {
+      var selectedGame = gameFilter.value;
+      filterDataByGame(selectedGame);
+    });
+    
+    function filterDataByGame(game) {
+      var dataContainer = document.getElementById("data-container");
+      var rows = dataContainer.getElementsByTagName("tr");
+    
+      for (var i = 0; i < rows.length; i++) {
+        var gameCell = rows[i].getElementsByTagName("td")[3];
+        if (game === "all" || gameCell.textContent.toLowerCase() === game.toLowerCase()) {
+          rows[i].style.display = "";
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
+    }
+    
+    </script>
+</html>
